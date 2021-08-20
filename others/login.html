@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+
+        input{
+            width: 100px;
+            height: 50px;
+        }
+
+        button:hover{
+    background-color: coral;
+    color: black;
+    
+}
+    </style>
+</head>     
+<body style="background-color: rgba(0, 128, 128, 0.486);">
+    <form align="center">
+        <label for="username">Username:
+            <input type="text" id="username" name="username" required>
+        </label>
+        <br><br>
+        <label for="password">Password:
+            <input type="password" id="password" name="password" required>
+
+        </label>
+        <label for="email">Email:
+            <input type="email" id="email" name="email" required>
+        </label>
+        <label for="phone"></label>Mobile No:
+        <input type="tel" id="phone" name="phone" required>
+
+        <button type="submit" id="submit1" name='submit1'> <a href="/loginsuccess.html">submit</a></button>
+        <button type="reset" id="reset" name="reset">Reset?</button>
+        <br><br>  <br><br>
+        <p>Select one of the options.</p>
+        <select id="selector">
+            <option selected>Hello</option>
+            <option>Hi</option>
+            <option>What's up?</option>
+            <option>🖐🏼</option>
+        </select>
+    </form>
+</body>
+</html>
