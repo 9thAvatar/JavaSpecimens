@@ -104,10 +104,9 @@
 
 <body>
     <div class="quotes">
-        <h1>The way to get started is to quit talking and start doing.
-            <br>
-            -Walt Disney
+        <h1>They laugh at me 'cause I'm different. I laugh at them 'cause they're all the same
         </h1>
+        <p align="right onload="startTime()" class="txt">Current Time: </p>
     </div>
     <header>
         <nav>
@@ -165,3 +164,21 @@
         to all the new updates coming soon.</p>
     <ol type="I">
         <li>A new Poems page ✔</li>
+                
+    <script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
