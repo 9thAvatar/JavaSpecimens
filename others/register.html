@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | JavaSpecimens</title>
+    <style>
+        h1{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 100;
+            font-size: xx-large;
+            color: white;
+        }
+        body{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        .fill-out-form-default{
+            padding-top: 100px;
+        }
+        label{
+            font-size: xx-large;
+        }
+        button{
+            width: 15%;
+            font-size: x-large;
+            border-radius: 20%;
+            border: #fff;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        button:hover{
+            animation: fadeIn;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fadeIn{
+            from{background-color: rgb(8, 7, 7);}
+            to{background-color:#fff;}
+        }
+
+        .fill-out-form-default{
+            border:gold groove;
+            border-radius: 23%;
+        }
+
+        input{
+            size: 50%;
+            font-size: x-large;
+        }
+        #clock{
+            font-size: 45px;
+            width: 900px;
+            margin:200px;
+            text-align: right;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Register</h1>
+    <div class="fill-out-form-default" align="center">
+        <form>
+            <label for="name">First Name</label>
+            <input type="text" size="45px" required>
+            <br><br><br><br>
+
+            <label for="Last name">Last Name</label>
+            <input type="text" size="45px" required>
+            <br><br><br><br>
+
+            <label for="Email">Email</label>
+            <input type="text" size="45px" required>
+            <br><br><br><br>
+
+            <button type="submit" class="fade_button"><a href="https://9thavatar.github.io/JavaSpecimens/">Submit</a></button>
+            
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+        <div id="clock">8:10:45</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        setInterval(showTime, 1000);
+            function showTime() {
+                let time = new Date();
+                let hour = time.getHours();
+                let min = time.getMinutes();
+                let sec = time.getSeconds();
+                am_pm = "AM";
+
+                if (hour > 12) {
+                    hour -= 12;
+                    am_pm = "PM";
+                }
+                if (hour == 0) {
+                    hr = 12;
+                    am_pm = "AM";
+                }
+
+                hour = hour < 10 ? "0" + hour : hour;
+                min = min < 10 ? "0" + min : min;
+                sec = sec < 10 ? "0" + sec : sec;
+
+                let currentTime = hour + ":"
+                    + min + ":" + sec + am_pm;
+
+                document.getElementById("clock")
+                    .innerHTML = currentTime;
+            }
+            showTime();
+
+    </script>
+    
+</body>
+</html>
