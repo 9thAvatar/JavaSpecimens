@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Guess the Number!!</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body{
+             background-image: url(https://9thavatar.github.io/JavaSpecimens/imagesandstuff/Evening%20Sunshine.jpg)
+        }
+
+        .container{
+            background-color: white;
+            text-align: center;
+            font-family: Arima Madurai;
+        }
+
+        #my_btn{
+            font-family: Yatra One;
+            background-color: black;
+            color: white;
+            border-radius: 8px;
+        }
+
+        input{
+            font-weight: 100;
+        }
+    </style>    
+</head>
+<body>
+   <div class="w3-container w3-display-middle w3-round-xlarge container">
+       <h3 style="font-family: Arima Madurai;">The system is thinking of a number between 1-100.</h3>
+       <h3 style="font-family: Arima Madurai;">Can you guess it?</h3>
+
+       <input type="text" placeholder="Enter a number to guess..." id="guess" class="w3-input" style="font-family: Shrikhand;"><br><br><br>
+       <button id="my_btn" onclick=play() class="w3-round-large w3-btn w3-medium w3-padding-large">GUESS</button>
+
+       <p id="message1">No. Of Guesses: 0</p>
+       <p id="message2">Guessed Numbers are: None</p>
+       <p id="message3"></p>
+   </div>
+   <!--Script-->
+   <script src="https://9thavatar.github.io/JavaSpecimens/others/script.js"></script>
+</body>
+</html>
